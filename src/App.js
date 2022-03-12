@@ -18,12 +18,13 @@ function App() {
     "Shot",
     "gritar: «Hago un oral gratis»",
   ];
-  
+
   const [indice, setIndice] = React.useState(
     Math.floor(Math.random() * (retos.length - 0) + 0)
   );
 
-  const nuevoReto = () => setIndice(Math.floor(Math.random() * (retos.length - 0) + 0));
+  const nuevoReto = () =>
+    setIndice(Math.floor(Math.random() * (retos.length - 0) + 0));
 
   return (
     <div className="App App-header">
