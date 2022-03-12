@@ -14,7 +14,7 @@ function App() {
   const [indice, setIndice] = React.useState(
     Math.floor(Math.random() * (retos.length - 0) + 0)
   );
-  const generarNumero = () =>
+  const nuevoReto = () =>
     setIndice(Math.floor(Math.random() * (4 - 0) + 0));
 
   return (
@@ -31,7 +31,7 @@ function App() {
       >
         <h1>Reto:</h1>
         <h2>{retos[indice]}</h2>
-        <Button color="success" sx={{maxWidth: '300px', fontWeight: 'bold'}} variant="contained" endIcon={<Fingerprint />}>
+        <Button onClick={nuevoReto} color="success" sx={{maxWidth: '300px', fontWeight: 'bold'}} variant="contained" endIcon={<Fingerprint />}>
         <h3>
         OTRO
         </h3>
