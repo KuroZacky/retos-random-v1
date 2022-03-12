@@ -1,7 +1,7 @@
 import * as React from "react";
 import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
-import Fingerprint from '@mui/icons-material/Fingerprint';
+import Fingerprint from "@mui/icons-material/Fingerprint";
 import "./App.css";
 
 function App() {
@@ -14,8 +14,7 @@ function App() {
   const [indice, setIndice] = React.useState(
     Math.floor(Math.random() * (retos.length - 0) + 0)
   );
-  const nuevoReto = () =>
-    setIndice(Math.floor(Math.random() * (4 - 0) + 0));
+  const nuevoReto = () => setIndice(Math.floor(Math.random() * (4 - 0) + 0));
 
   return (
     <div className="App App-header">
@@ -31,11 +30,15 @@ function App() {
       >
         <h1>Reto:</h1>
         <h2>{retos[indice]}</h2>
-        <Button onClick={nuevoReto} color="success" sx={{maxWidth: '300px', fontWeight: 'bold'}} variant="contained" endIcon={<Fingerprint />}>
-        <h3>
-        OTRO
-        </h3>
-      </Button>
+        <Button
+          onClick={nuevoReto}
+          color="success"
+          sx={{ maxWidth: "300px", fontWeight: "bold" }}
+          variant="contained"
+          endIcon={<Fingerprint />}
+        >
+          <h3>OTRO</h3>
+        </Button>
       </Box>
     </div>
   );
